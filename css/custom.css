@@ -5,3 +5,7 @@
 .client-info {
     padding-left: 82px;
 }
+
+.short_info a {
+    color: #777777;
+}

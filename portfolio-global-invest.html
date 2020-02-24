@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Portfolio</title>
+	<title>Portfolio Details</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
@@ -40,8 +39,8 @@
 							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-							<li class="nav-item active"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-							<li class="nav-item submenu dropdown">
+							<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+							<li class="nav-item submenu dropdown active">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
 								 aria-expanded="false">Pages</a>
 								<ul class="dropdown-menu">
@@ -71,10 +70,11 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Portfolio Details</h2>
                     <div class="page_link">
                         <a href="index.html">Home</a>
                         <a href="portfolio.html">Portfolio</a>
+                        <a href="portfolio-global-invest.html">Selling Books Online</a>
                     </div>
                 </div>
             </div>
@@ -82,206 +82,56 @@
     </section>
     <!--================ End Banner Area =================-->
 
-	<!--================Start Portfolio Area =================-->
-	<section class="portfolio_area section_gap_top" id="portfolio">
+	<!--================Start Portfolio Details Area =================-->
+	<section class="portfolio_details_area section_gap">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="main_title text-left">
-                        <h2>quality work <br>
-                            Recently done project </h2>
+            <div class="portfolio_details_inner">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="left_img">
+                            <img class="img-fluid" src="img/portfolio/portfolio-global-invest.png" alt="">
+                        </div>
+                    </div>
+                    <div class="offset-lg-1 col-lg-5">
+                        <div class="portfolio_right_text mt-30">
+                            <h4 class="text-uppercase">Selling Books Online</h4>
+                            <p>
+                                This is an online app to download books and other resources which are uploaded by admin.
+                            </p>
+                            <h5>Technology Used</h5>
+                            <ul>
+                                <li>PayPal payment api used.</li>
+                                <li>CodeIgniter php framework is used for server side coding.</li>
+                                <li>Bootstrap and jQuery are used for client side coding.</li>
+                                <li>MySQL is used as database.</li>
+                                <li>CKeditor plugin used.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                <p>
+                    <h5>Project Details</h5>
+                    <ul>
+                        <li>Admin Panel
+                            <ul>
+                                <li>Banner edit to show in website.</li>
+                                <li>Notice add for customers.</li>
+                                <li>Website content updates.</li>
+                                <li>Upload books and other resources. Keep history of uploaded resources.</li>
+                            </ul>
+                        </li>
+                        <li>Website
+                            <ul>
+                                <li>Create account by providing fixed amount of donation.</li>
+                                <li>Download books and other resources after login.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </p>
             </div>
-            <div class="filters portfolio-filter">
-                <ul>
-					<li class="active" data-filter="*">all</li>
-					<li data-filter=".a2i">a2i</li>
-<!--                    <li data-filter=".popular">popular</li>-->
-<!--                    <li data-filter=".latest"> latest</li>-->
-<!--                    <li data-filter=".following">following</li>-->
-<!--                    <li data-filter=".upcoming">upcoming</li>-->
-                </ul>
-            </div>
-    
-            <div class="filters-content">
-				<div class="row portfolio-grid justify-content-center">
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/anaheim.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/anaheim.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-anaheim.html" target="_blank">
-								<h4>Anaheim Town Car Services</h4>
-								<p>Car Reservation System.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/boi-bichitra.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/boi-bichitra.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-boi-bichitra.html" target="_blank">
-								<h4>Boi Bichitra</h4>
-								<p>Inventory and Invoicing System.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/dhmanager.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/dhmanager.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-domain-hosting.html" target="_blank">
-								<h4>Domain Hosting Manager</h4>
-								<p>Expiry tracking and notification system.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all a2i">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/entertainment-portal.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/entertainment-portal.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-entertainment-portal.html" target="_blank">
-								<h4>Entertainment Portal</h4>
-								<p>Profile and work archive of artists.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all a2i">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/audible-service.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/audible-service.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-audible-service.html" target="_blank">
-								<h4>Bangladesh Audible Service</h4>
-								<p>Voice, picture and location instruction of getting govt. services.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/global-invest.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/global-invest.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-global-invest.html" target="_blank">
-								<h4>Selling Books Online</h4>
-								<p>Download books by providing donation.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/sea-shell.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/sea-shell.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-sea-shell.html" target="_blank">
-								<h4>Restaurant POS</h4>
-								<p>Create invoice in restaurant pos.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all a2i">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/foreign-language.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/foreign-language.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-foreign-language.html" target="_blank">
-								<h4>Foreign Language Learning</h4>
-								<p>Different language learning through audio and video.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/rpms.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/rpms.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<a href="portfolio-rpms.html" target="_blank">
-								<h4>Remote Patient Monitoring</h4>
-								<p>Monitoring patient remotely.</p>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
         </div>
     </section>
-    <!--================End Portfolio Area =================-->
+    <!--================End Portfolio Details Area =================-->
     
     <!--================ Start Newsletter Area =================-->
     <!--<section class="newsletter_area">
@@ -310,7 +160,7 @@
     </section>-->
     <!--================ End Newsletter Area =================-->
         
-        <!--================Footer Area =================-->
+    <!--================Footer Area =================-->
 	<footer class="footer_area">
         <div class="container">
             <div class="row justify-content-center">
@@ -323,9 +173,9 @@
                             <h4>Follow Me</h4>
                         </div>
                         <div class="footer_social">
-							<a href="https://www.facebook.com/riazul701" target="_blank"><i class="fa fa-facebook"></i></a>
-							<a href="https://plus.google.com/+riazul701" target="_blank"><i class="fa fa-google-plus"></i></a>
-							<a href="https://github.com/riazul701" target="_blank"><i class="fa fa-github"></i></a>
+                            <a href="https://www.facebook.com/riazul701" target="_blank"><i class="fa fa-facebook"></i></a>
+                            <a href="https://plus.google.com/+riazul701" target="_blank"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://github.com/riazul701" target="_blank"><i class="fa fa-github"></i></a>
 <!--                            <a href="#"><i class="fa fa-facebook"></i></a>-->
 <!--                            <a href="#"><i class="fa fa-twitter"></i></a>-->
 <!--                            <a href="#"><i class="fa fa-dribbble"></i></a>-->

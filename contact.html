@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
@@ -105,7 +106,17 @@
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate">
+                    <div id="feedback">
+                        <div id="input-error">
+                            <div id="name-error" style="display: none;">Please enter name.</div>
+                            <div id="email-error" style="display: none;">Please enter email.</div>
+                            <div id="subject-error" style="display: none;">Please enter subject.</div>
+                            <div id="message-error" style="display: none;">Please enter message.</div>
+                        </div>
+                        <div class="alert alert-success" role="alert" id="feedback-success" style="display: none;">Email sent successfully.</div>
+                        <div class="alert alert-danger" role="alert" id="feedback-failed" style="display: none;">Email sending failed!</div>
+                    </div>
+                    <form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate" onsubmit="return false">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
@@ -123,7 +134,7 @@
                             </div>
                         </div>
                         <div class="col-md-12 text-right">
-                            <button type="submit" value="submit" class="primary_btn">
+                            <button type="submit" value="submit" class="primary_btn" onclick="contact();">
                                 <span>Send Message</span>
                             </button>
                         </div>
@@ -193,6 +204,56 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/theme.js"></script>
+
+<script>
+function contact() {
+    $("#name-error").css('display', 'none');
+    $("#email-error").css('display', 'none');
+    $("#subject-error").css('display', 'none');
+    $("#message-error").css('display', 'none');
+    $("#feedback-success").css('display', 'none');
+    $("#feedback-failed").css('display', 'none');
+
+    var name = $('#name').val();
+    var email = $('#email').val();
+    var subject = $('#subject').val();
+    var message = $('#message').val();
+
+    if((name == '') || (email == '') || (subject == '') || (message == '')) {
+        if(name == '') {
+            $("#name-error").css('display', 'block');
+        }
+        if(email == '') {
+            $("#email-error").css('display', 'block');
+        }
+        if(subject == '') {
+            $("#subject-error").css('display', 'block');
+        }
+        if(message == '') {
+            $("#message-error").css('display', 'block');
+        }
+    } else {
+        $.post("http://localhost/portfolio/portfolio-mail.php",
+            {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            },
+            function (data, status) {
+                if(data == 'success') {
+                    $("#feedback-success").css('display', 'block');
+                } else {
+                    $("#feedback-failed").css('display', 'block');
+                }
+                $('#name').val('');
+                $('#email').val('');
+                $('#subject').val('');
+                $('#message').val('');
+            });
+    }
+}
+</script>
 </body>
 
 </html>

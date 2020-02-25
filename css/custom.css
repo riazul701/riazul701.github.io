@@ -9,3 +9,12 @@
 .short_info a {
     color: #777777;
 }
+
+#feedback {
+    font-size: 14px;
+    text-align: center;
+}
+
+#input-error {
+    color: #FF0000;
+}

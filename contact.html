@@ -233,7 +233,8 @@ function contact() {
             $("#message-error").css('display', 'block');
         }
     } else {
-        $.post("http://localhost/portfolio/portfolio-mail.php",
+        // $.post("http://localhost/portfolio/portfolio-mail.php",
+        $.post("http://riazul.rf.gd/portfolio-mail.php",
             {
                 name: name,
                 email: email,

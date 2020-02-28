@@ -113,8 +113,8 @@
                             <div id="subject-error" style="display: none;">Please enter subject.</div>
                             <div id="message-error" style="display: none;">Please enter message.</div>
                         </div>
-                        <div class="alert alert-success" role="alert" id="feedback-success" style="display: none;">Email sent successfully.</div>
-                        <div class="alert alert-danger" role="alert" id="feedback-failed" style="display: none;">Email sending failed!</div>
+                        <div class="alert alert-success" role="alert" id="feedback-success" style="display: none;">Form submitted successfully.</div>
+                        <div class="alert alert-danger" role="alert" id="feedback-failed" style="display: none;">Form submission failed!</div>
                     </div>
                     <form class="row contact_form" action="" method="post" id="contactForm" novalidate="novalidate" onsubmit="return false">
                         <div class="col-md-6">
@@ -233,25 +233,49 @@ function contact() {
             $("#message-error").css('display', 'block');
         }
     } else {
-        // $.post("http://localhost/portfolio/portfolio-mail.php",
-        $.post("https://riazul.rf.gd/portfolio-mail.php",
-            {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
+        $.ajax({
+            url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSffIpAZzlQAvEWv2CK4DSMlDYENjoB3EBhfxamHfSAHzv-mKw/formResponse",
+            data: {
+                "entry.714426314": name,
+                "entry.309645213": email,
+                "entry.557464260": subject,
+                "entry.57313611": message
             },
-            function (data, status) {
-                if(data == 'success') {
-                    $("#feedback-success").css('display', 'block');
-                } else {
-                    $("#feedback-failed").css('display', 'block');
-                }
-                $('#name').val('');
-                $('#email').val('');
-                $('#subject').val('');
-                $('#message').val('');
-            });
+            type: "POST",
+            dataType: "xml",
+            success: function(d) {
+                // $("#feedback-success").css('display', 'block');
+            },
+            error: function(x, y, z) {
+                // $("#feedback-failed").css('display', 'block');
+            }
+        });
+        $("#feedback-success").css('display', 'block');
+        $('#name').val('');
+        $('#email').val('');
+        $('#subject').val('');
+        $('#message').val('');
+
+
+        // $.post("http://localhost/portfolio/portfolio-mail.php",
+        // $.post("https://riazul.rf.gd/portfolio-mail.php",
+        //     {
+        //         name: name,
+        //         email: email,
+        //         subject: subject,
+        //         message: message
+        //     },
+        //     function (data, status) {
+        //         if(data == 'success') {
+        //             $("#feedback-success").css('display', 'block');
+        //         } else {
+        //             $("#feedback-failed").css('display', 'block');
+        //         }
+        //         $('#name').val('');
+        //         $('#email').val('');
+        //         $('#subject').val('');
+        //         $('#message').val('');
+        //     });
     }
 }
 </script>
